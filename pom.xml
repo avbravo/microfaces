@@ -215,6 +215,14 @@
                     </commandLineOptions>
                 </configuration>
                 <version>1.4.0</version>
+                  <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>bundle</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

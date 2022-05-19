@@ -19,7 +19,7 @@
     <h:body class="sb-nav-fixed" id="bodytemplate" >
         <f:view contentType="text/html"> 
             <h:form id="form" prependId="false">
-<p:growl id="growl"/>
+                <p:growl id="growl"/>
                 <div id="layoutAuthentication">
                     <div id="layoutAuthentication_content">
                         <main>
@@ -29,52 +29,52 @@
                                         <div class="card shadow-lg border-0 rounded-lg mt-5">
                                             <div class="card-header">
                                                 <h3 class="text-center font-weight-light my-4">Login
-                                                  <i class="pi pi-key" style="font-size: 2rem"></i>
+                                                    <i class="pi pi-key" style="font-size: 2rem"></i>
                                                 </h3>
                                             </div>
                                             <div class="card-body">
-                                             
-                                                    <div>
-                                                        <p:outputLabel  id="inputEmail" value="#{loginController.username}" />
 
+                                                <div>
+                                                    <p:outputLabel  id="inputEmail" value="#{loginController.username}" />
+
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <p:password class="form-control"  value="#{loginController.password}" id="inputPassword"  placeholder="Password"
+
+                                                                />
+
+                                                    <label for="inputPassword">Password</label>
+                                                </div>
+                                                <div class="ui-fluid p-formgrid p-grid">
+                                                    <div class="p-field p-col-12 p-md-4">
+                                                        <p:outputLabel for="@next" value="Profile"/>
+                                                        <p:selectOneMenu id="option" value="#{loginController.profile}">
+                                                            <f:selectItem itemLabel="Select One" itemValue=""/>
+                                                            <f:selectItem itemLabel="Option1" itemValue="Option1"/>
+                                                            <f:selectItem itemLabel="Option2" itemValue="Option2"/>
+                                                            <f:selectItem itemLabel="Option3" itemValue="Option3"/>
+
+                                                        </p:selectOneMenu>
                                                     </div>
-                                                    <div class="form-floating mb-3">
-                                                        <p:password class="form-control"  value="#{loginController.password}" id="inputPassword"  placeholder="Password"
-                                                               
-                                                               />
-                                                        
-                                                        <label for="inputPassword">Password</label>
-                                                    </div>
-                                                    <div class="ui-fluid p-formgrid p-grid">
-                                                        <div class="p-field p-col-12 p-md-4">
-                                                            <p:outputLabel for="@next" value="Profile"/>
-                                                            <p:selectOneMenu id="option" value="#{loginController.profile}">
-                                                                <f:selectItem itemLabel="Select One" itemValue=""/>
-                                                                <f:selectItem itemLabel="Option1" itemValue="Option1"/>
-                                                                <f:selectItem itemLabel="Option2" itemValue="Option2"/>
-                                                                <f:selectItem itemLabel="Option3" itemValue="Option3"/>
-                                                             
-                                                            </p:selectOneMenu>
-                                                        </div>
-                                                        </div>
+                                                </div>
 
-                                                        <div class="form-check mb-3">
-                                                          <p:selectBooleanCheckbox  class="form-check-input" value="#{loginController.remember}"  id="inputRememberPassword" />
-                                                            
-                                                            <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
-                                                        </div>
-                                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                            <!--<a class="small" href="password.html">Forgot Password?</a>-->
-                                                            <p:commandButton value ="Olvido passwowrd?"  styleClass="ui-button-flat" action="password"/>
+                                                <div class="form-check mb-3">
+                                                    <p:selectBooleanCheckbox  class="form-check-input" value="#{loginController.remember}"  id="inputRememberPassword" />
 
-                                                            <p:commandButton value ="Ingresar" 
-                                                                             styleClass="rounded-button"
-                                                                             update=":form:growl"
-                                                                             action="#{loginController.login()}"/>
-                                                         
+                                                    <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                    <!--<a class="small" href="password.html">Forgot Password?</a>-->
+                                                    <p:commandButton value ="Olvido passwowrd?"  styleClass="ui-button-flat" action="password"/>
 
-                                                        </div>
-                                        
+                                                    <p:commandButton value ="Ingresar" 
+                                                                     styleClass="rounded-button"
+                                                                     update=":form:growl"
+                                                                     action="#{loginController.login()}"/>
+
+
+                                                </div>
+
                                             </div>
                                             <div class="card-footer text-center py-3">
                                                 <div class="small">
